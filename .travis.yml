@@ -1,0 +1,23 @@
+language: node_js
+branches:
+  only:
+    - master
+    - next
+cache:
+  directories:
+    - ~/.npm
+install:
+  - npm install
+node_js:
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+notifications:
+  email:
+    on_failure: change
+script:
+  - npm run lint
+  - npm run test:unitary -- --coverage --coverageReporters=text-lcov | coveralls
+  - npm run test:functional

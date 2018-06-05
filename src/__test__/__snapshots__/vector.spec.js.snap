@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Vector constructor() allows an arbitrary number of components 1`] = `
+Vector {
+  "components": Array [
+    1,
+  ],
+}
+`;
+
+exports[`Vector constructor() allows an arbitrary number of components 2`] = `
+Vector {
+  "components": Array [
+    1,
+    2,
+    3,
+  ],
+}
+`;

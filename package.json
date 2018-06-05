@@ -1,0 +1,58 @@
+{
+  "author": {
+    "name": "Pablo Molina",
+    "email": "contact@pablomolina.me",
+    "url": "https://pablomolina.me"
+  },
+  "browser": "dist/vktr.js",
+  "dependencies": {},
+  "description": "Tiny, immutable and fast n-dimensional vector with pure functional calculations",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.0.1",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.7.0",
+    "coveralls": "^3.0.1",
+    "eslint": "^4.19.1",
+    "eslint-plugin-prettier": "^2.6.0",
+    "husky": "^0.14.3",
+    "jest": "^23.1.0",
+    "lint-staged": "^7.1.3",
+    "prettier": "^1.13.4",
+    "puppeteer": "^1.4.0",
+    "rimraf": "^2.6.2",
+    "rollup": "^0.59.4",
+    "rollup-plugin-babel": "^3.0.4"
+  },
+  "engines": {
+    "node": ">= 6",
+    "npm": ">= 5"
+  },
+  "jsnext:main": "src/index.js",
+  "license": "MIT",
+  "lint-staged": {
+    "*.js": ["eslint --fix", "git add"]
+  },
+  "main": "dist/vktr.js",
+  "name": "vktr",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/p2kmgcl/vktr"
+  },
+  "scripts": {
+    "build": "rollup --config",
+    "clean": "rimraf dist/",
+    "lint": "eslint src/ test/",
+    "lint:fix": "eslint --fix src/ test/",
+    "prebuild": "npm run clean",
+    "precommit": "lint-staged",
+    "pretest:functional": "npm run build",
+    "test": "npm run test:unitary && npm run test:functional",
+    "test:functional": "npm run test:functional:browser && npm run test:functional:node",
+    "test:functional:browser": "node test/launch-browser-test.js",
+    "test:functional:node": "node test/launch-node-test.js",
+    "test:unitary": "jest"
+  },
+  "version": "1.0.0"
+}
