@@ -32,7 +32,10 @@
   "jsnext:main": "src/index.js",
   "license": "MIT",
   "lint-staged": {
-    "*.js": ["eslint --fix", "git add"]
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
   },
   "main": "dist/vktr.js",
   "name": "vktr",
