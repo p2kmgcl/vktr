@@ -38,6 +38,21 @@ describe("Vector", () => {
     });
   });
 
+  describe("get length()", () => {
+    it("returns the Euclidean length of the vector", () => {
+      expect(new Vector(0, 1).length).toMatchSnapshot();
+      expect(new Vector(1, 0).length).toMatchSnapshot();
+    });
+
+    it("works for n-dimensional vectors", () => {
+      expect(new Vector(1).length).toMatchSnapshot();
+      expect(new Vector(1, 0, 0).length).toMatchSnapshot();
+      expect(new Vector(0, 1, 0).length).toMatchSnapshot();
+      expect(new Vector(0, 0, 1).length).toMatchSnapshot();
+      expect(new Vector(10, 0, 0, 0).length).toMatchSnapshot();
+    });
+  });
+
   describe("get coordinate()", () => {
     it("returns the first four coordinates of a vector", () => {
       const a = new Vector(1, 2, 3, 4);
