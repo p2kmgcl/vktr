@@ -17,3 +17,17 @@ Vector {
   ],
 }
 `;
+
+exports[`Vector get length() returns the Euclidean length of the vector 1`] = `1`;
+
+exports[`Vector get length() returns the Euclidean length of the vector 2`] = `1`;
+
+exports[`Vector get length() works for n-dimensional vectors 1`] = `1`;
+
+exports[`Vector get length() works for n-dimensional vectors 2`] = `1`;
+
+exports[`Vector get length() works for n-dimensional vectors 3`] = `1`;
+
+exports[`Vector get length() works for n-dimensional vectors 4`] = `1`;
+
+exports[`Vector get length() works for n-dimensional vectors 5`] = `10`;
