@@ -107,6 +107,7 @@ easy-to-test environment. Each function has complete documentation about the
 expected data and result:
 
 - [`add(Vector, Vector) → Vector`](/src/add.js)
+- [`divide(Vector, number) → Vector`](/src/divide.js)
 - [`map(Vector, function) → Vector`](/src/map.js)
 - [`multiply(Vector, number) → Vector`](/src/multiply.js)
 - [`substract(Vector, Vector) → Vector`](/src/substract.js)
