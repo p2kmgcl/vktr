@@ -67,38 +67,29 @@ map(a, fn); // [8, 10, 12]
 
 ### `new Vector(...number)`
 
-Creates a n-dimensional `Vector` object which can be used for calculations.
-Every component can be accessed inside the **readonly** `components` property,
-which is an array of numbers.
+Creates a n-dimensional `Vector` object which can be used for calculations. A
+Vector **has an arbitrary number of components**, which has to be greater than
+zero.
 
-For physics related access  to components, **some shortcuts have been added** to
-this structure. For example, for this vector:
+Once a vector is created, it's components cannot be modified without
+producing a new Vector. This effect is call [immutability](https://en.wikipedia.org/wiki/Immutable_object), which causes predictable and
+efficient code.
 
-```js
-const v = new Vector(1, 2, 3, 4, 5);
-```
-
-You can access the first four properties as `x`, `y`, `z` and `t`.  Rest of
-**components can still be accessed using the components array property**, so
-for the first four and the following components, this code still works:
-
-```js
-v.x;                // 1
-v.y;                // 2
-v.z;                // 3
-v.t;                // 4
-
-v.components[0];    // 1
-v.components[1];    // 2
-v.components[2];    // 3
-v.components[3];    // 4
-v.components[4];    // 5
-```
+However, there are some computed properties that are not calculated until you
+try to access them. Appart from this properties, the only way of making
+calculations is producing new Vectors.
 
 ### Computed properties
 
-- `dimensions → number`: number of dimensions of vector.
-- `length → number`: Euclidean length of the vector.
+- `dimensions: number`: number of dimensions of the vector.
+- `length: number`: Euclidean length of the the vector.
+
+<span></span>
+
+- `x: number`: Returns the first component of the vector, if any.
+- `y: number`: Returns the second component of the vector, if any.
+- `z: number`: Returns the third component of the vector, if any.
+- `t: number`: Returns the fourth component of the vector, if any.
 
 ### Math functions
 
