@@ -1,20 +1,14 @@
 {
+  "presets": [
+    [
+      "env",
+      { "modules": false }
+    ]
+  ],
+
   "env": {
-    "production": {
-      "plugins": [
-        "external-helpers"
-      ],
-
-      "presets": [
-        [
-          "env",
-          { "modules": false }
-        ]
-      ]
-    },
-
     "test": {
       "presets": "env"
     }
-  },
+  }
 }
