@@ -95,9 +95,10 @@ v.components[3];    // 4
 v.components[4];    // 5
 ```
 
-There is also a `dimensions` property which keeps the number of dimensions
-used inside a vector. **This is equivalent to read the length of `dimensions`
-array**.
+### Computed properties
+
+- `dimensions → number`: number of dimensions of vector.
+- `length → number`: Euclidean length of the vector.
 
 ### Math functions
 

@@ -27,6 +27,19 @@ class Vector {
   }
 
   /**
+   * Returns the Euclidean length of the vector
+   * @return {number}
+   * @see https://en.wikipedia.org/wiki/Euclidean_vector#Length
+   */
+  get length() {
+    return Math.sqrt(
+      this.components
+        .map(component => component ** 2)
+        .reduce((a, b) => a + b, 0)
+    );
+  }
+
+  /**
    * Returns a string representation of the Vector
    * @return {string}
    */
