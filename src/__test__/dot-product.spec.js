@@ -1,4 +1,3 @@
-import angle from "../angle";
 import dotProduct from "../dot-product";
 import Vector from "../vector";
 
@@ -28,12 +27,5 @@ describe("dotProduct()", () => {
     const b = new Vector(-1, -1, 0, 25, 1);
 
     expect(dotProduct(a, b)).toMatchSnapshot();
-  });
-
-  it("passes the geometric definition", () => {
-    const a = new Vector(1, 1, 3, 7, 13);
-    const b = new Vector(-1, -1, 0, 25, 1);
-
-    expect(dotProduct(a, b)).toEqual(a.length * b.length * angle(a, b));
   });
 });

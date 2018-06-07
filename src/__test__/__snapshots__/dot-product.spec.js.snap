@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`dotProduct() returns the dot product of two vectors 1`] = `-2`;
+
+exports[`dotProduct() works for n-dimensional vectors 1`] = `186`;
