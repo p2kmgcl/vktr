@@ -5,7 +5,7 @@ describe("multiply()", () => {
   it("multiplies every component by a number", () => {
     const a = new Vector(0, 1, 0, -2);
 
-    expect(multiply(a, -4)).toMatchSnapshot();
+    expect(multiply(a, -4).components).toMatchSnapshot();
   });
 
   it("requires a number parameter", () => {

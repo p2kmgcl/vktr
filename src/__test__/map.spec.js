@@ -7,7 +7,7 @@ describe("map()", () => {
     const a = new Vector(1, 2, 3);
     const b = map(a, by2);
 
-    expect(b).toMatchSnapshot();
+    expect(b.components).toMatchSnapshot();
     expect(by2.mock.calls).toMatchSnapshot();
   });
 

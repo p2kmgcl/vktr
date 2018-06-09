@@ -1,5 +1,9 @@
+/* global WeakMap */
+
 import isGreaterThan from "./assertions/is-greater-than";
 import isNumber from "./assertions/is-number";
+
+const privateProperties = new WeakMap();
 
 /**
  * n-dimensional vector
@@ -15,7 +19,21 @@ class Vector {
     isGreaterThan(components.length, 0);
     components.forEach(component => isNumber(component));
 
-    this.components = Object.freeze([...components]);
+    Object.freeze(this);
+
+    privateProperties.set(this, {
+      components: Object.freeze([...components])
+    });
+  }
+
+  /**
+   * Return the list of components of the vector
+   * @return {Array<number>}
+   */
+  get components() {
+    const props = privateProperties.get(this);
+
+    return props.components;
   }
 
   /**

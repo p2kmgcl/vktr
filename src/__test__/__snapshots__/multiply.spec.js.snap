@@ -1,12 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`multiply() multiplies every component by a number 1`] = `
-Vector {
-  "components": Array [
-    -0,
-    -4,
-    -0,
-    8,
-  ],
-}
+Array [
+  -0,
+  -4,
+  -0,
+  8,
+]
 `;

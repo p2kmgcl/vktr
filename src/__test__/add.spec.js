@@ -6,7 +6,7 @@ describe("add()", () => {
     const a = new Vector(1);
     const b = new Vector(2);
 
-    expect(add(a, b)).toMatchSnapshot();
+    expect(add(a, b).components).toMatchSnapshot();
   });
 
   it("requires vector parameter", () => {

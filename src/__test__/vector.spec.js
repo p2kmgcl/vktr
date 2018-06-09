@@ -6,8 +6,8 @@ describe("Vector", () => {
       const a = new Vector(1);
       const b = new Vector(1, 2, 3);
 
-      expect(a).toMatchSnapshot();
-      expect(b).toMatchSnapshot();
+      expect(a.components).toMatchSnapshot();
+      expect(b.components).toMatchSnapshot();
     });
 
     it("fails for zero components", () => {
@@ -21,9 +21,10 @@ describe("Vector", () => {
       expect(() => new Vector(NaN)).toThrow(TypeError);
     });
 
-    it("does not allow modifying components", () => {
+    it("is frozen", () => {
       const a = new Vector(1, 2, 3);
 
+      expect(Object.isFrozen(a)).toBe(true);
       expect(Object.isFrozen(a.components)).toBe(true);
     });
   });

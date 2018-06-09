@@ -6,7 +6,7 @@ describe("substract()", () => {
     const a = new Vector(1);
     const b = new Vector(2);
 
-    expect(substract(a, b)).toMatchSnapshot();
+    expect(substract(a, b).components).toMatchSnapshot();
   });
 
   it("requires vector parameter", () => {
