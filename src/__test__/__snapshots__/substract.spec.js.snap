@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`substract() allows substracting two vectors 1`] = `
-Vector {
-  "components": Array [
-    -1,
-  ],
-}
+Array [
+  -1,
+]
 `;

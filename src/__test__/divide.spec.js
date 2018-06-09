@@ -5,7 +5,7 @@ describe("divide()", () => {
   it("divides every component by a number", () => {
     const a = new Vector(0, 1, 0, -2);
 
-    expect(divide(a, -4)).toMatchSnapshot();
+    expect(divide(a, -4).components).toMatchSnapshot();
   });
 
   it("requires a vector parameter", () => {

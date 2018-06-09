@@ -1,13 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`map() applies the given function to each component 1`] = `
-Vector {
-  "components": Array [
-    2,
-    4,
-    6,
-  ],
-}
+Array [
+  2,
+  4,
+  6,
+]
 `;
 
 exports[`map() applies the given function to each component 2`] = `
