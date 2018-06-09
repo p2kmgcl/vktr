@@ -26,6 +26,7 @@ preferely added inside separated commits with this order:
 2. Implement tests for the created definition.
 3. Write a function which solves every test you created, being sure that
    you add proper documentation and all the necessary assertions.
+4. Export your created function from src/index.js file
 
 ## Code review process
 
