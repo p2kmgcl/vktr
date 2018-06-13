@@ -38,8 +38,13 @@ describe("Vector", () => {
 
     it("returns vectors polar form angle", () => {
       expect(new Vector(1, 0).angle).toBe(0);
+      expect(new Vector(1, 1).angle).toBe(Math.PI / 4);
       expect(new Vector(0, 1).angle).toBe(Math.PI / 2);
+      expect(new Vector(-1, 1).angle).toBe((3 * Math.PI) / 4);
       expect(new Vector(-1, 0).angle).toBe(Math.PI);
+      expect(new Vector(-1, -1).angle).toBe((5 * Math.PI) / 4);
+      expect(new Vector(0, -1).angle).toBe((3 * Math.PI) / 2);
+      expect(new Vector(1, -1).angle).toBe((7 * Math.PI) / 4);
     });
   });
 
