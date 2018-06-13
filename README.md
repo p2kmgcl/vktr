@@ -81,7 +81,12 @@ calculations is producing new Vectors.
 
 ### Computed properties
 
+- `angle: number`: Vector's polar form angle. Only valid for
+  2-dimensional vectors.
+- `components: Array<number>`: Array of components of the vector.
 - `dimensions: number`: number of dimensions of the vector.
+- `magnitude: number`: Euclidean length of the vector.
+  Alias for length property.
 - `length: number`: Euclidean length of the the vector.
 
 <span></span>
@@ -93,14 +98,18 @@ calculations is producing new Vectors.
 
 ### Math functions
 
+> When using notation like `n-Vector` inside this documentation, it does
+> not refer to different `Vector` classes, just the number of dimensions allowed
+> for each vector.
+
 As **`Vector`s are not mutable**, every math function applied to them produces
 a new `Vector` instead of modifying the existing. This results in an predictable
 easy-to-test environment. Each function has complete documentation about the
 expected data and result:
 
-- [`add(Vector, Vector) → Vector`](/src/add.js)
-- [`divide(Vector, number) → Vector`](/src/divide.js)
-- [`dotProduct(Vector, Vector) → number`](/src/dot-product.js)
-- [`map(Vector, function) → Vector`](/src/map.js)
-- [`multiply(Vector, number) → Vector`](/src/multiply.js)
-- [`substract(Vector, Vector) → Vector`](/src/substract.js)
+- [`add(n-Vector, n-Vector) → n-Vector`](/src/add.js)
+- [`divide(n-Vector, number) → n-Vector`](/src/divide.js)
+- [`dotProduct(n-Vector, n-Vector) → number`](/src/dot-product.js)
+- [`map(n-Vector, function) → n-Vector`](/src/map.js)
+- [`multiply(n-Vector, number) → n-Vector`](/src/multiply.js)
+- [`substract(n-Vector, n-Vector) → n-Vector`](/src/substract.js)

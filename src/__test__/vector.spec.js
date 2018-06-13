@@ -29,6 +29,25 @@ describe("Vector", () => {
     });
   });
 
+  describe("get angle()", () => {
+    it("only works for 2-dimensional vectors", () => {
+      expect(() => new Vector(1).angle).toThrow(RangeError);
+      expect(() => new Vector(2, 3, 4).angle).toThrow(RangeError);
+      expect(() => new Vector(5, 6, 7, 8).angle).toThrow(RangeError);
+    });
+
+    it("returns vectors polar form angle", () => {
+      expect(new Vector(1, 0).angle).toBe(0);
+      expect(new Vector(1, 1).angle).toBe(Math.PI / 4);
+      expect(new Vector(0, 1).angle).toBe(Math.PI / 2);
+      expect(new Vector(-1, 1).angle).toBe((3 * Math.PI) / 4);
+      expect(new Vector(-1, 0).angle).toBe(Math.PI);
+      expect(new Vector(-1, -1).angle).toBe((5 * Math.PI) / 4);
+      expect(new Vector(0, -1).angle).toBe((3 * Math.PI) / 2);
+      expect(new Vector(1, -1).angle).toBe((7 * Math.PI) / 4);
+    });
+  });
+
   describe("get dimensions()", () => {
     it("returns the number of dimensions", () => {
       const a = new Vector(1);
@@ -39,17 +58,17 @@ describe("Vector", () => {
     });
   });
 
-  describe("get length()", () => {
+  describe("get magnitude() and length()", () => {
     it("returns the Euclidean length of the vector", () => {
-      expect(new Vector(0, 1).length).toMatchSnapshot();
+      expect(new Vector(0, 1).magnitude).toMatchSnapshot();
       expect(new Vector(1, 0).length).toMatchSnapshot();
     });
 
     it("works for n-dimensional vectors", () => {
       expect(new Vector(1).length).toMatchSnapshot();
-      expect(new Vector(1, 0, 0).length).toMatchSnapshot();
+      expect(new Vector(1, 0, 0).magnitude).toMatchSnapshot();
       expect(new Vector(0, 1, 0).length).toMatchSnapshot();
-      expect(new Vector(0, 0, 1).length).toMatchSnapshot();
+      expect(new Vector(0, 0, 1).magnitude).toMatchSnapshot();
       expect(new Vector(10, 0, 0, 0).length).toMatchSnapshot();
     });
   });
