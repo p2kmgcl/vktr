@@ -112,4 +112,5 @@ expected data and result:
 - [`dotProduct(n-Vector, n-Vector) → number`](/src/dot-product.js)
 - [`map(n-Vector, function) → n-Vector`](/src/map.js)
 - [`multiply(n-Vector, number) → n-Vector`](/src/multiply.js)
+- [`normalize(n-Vector) → nVector`](/src/normalize.js)
 - [`substract(n-Vector, n-Vector) → n-Vector`](/src/substract.js)
