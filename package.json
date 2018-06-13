@@ -57,5 +57,5 @@
     "test:functional:node": "node test/launch-node-test.js",
     "test:unitary": "jest"
   },
-  "version": "1.0.0"
+  "version": "1.1.0"
 }
